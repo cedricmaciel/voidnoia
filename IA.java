@@ -16,6 +16,6 @@ public class IA {
     
     public String responderPergunta(String pergunta) {
         
-        return "A resposta para tudo é 42!";
+        return "";
     }
 }

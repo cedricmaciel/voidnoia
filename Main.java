@@ -11,15 +11,15 @@ public class Main {
         IA inteligenciaArtificial = new IA();
 
         
-        String textoParaEnsinar = "Exemplo de texto para ensinar a IA.";
+        String textoParaEnsinar = "";
         inteligenciaArtificial.aprenderTexto(textoParaEnsinar);
 
         
-        String caminhoDaFoto = "/caminho/para/sua/foto.jpg";
+        String caminhoDaFoto = "";
         inteligenciaArtificial.aprenderFoto(caminhoDaFoto);
 
         
-        String pergunta = "Qual é a resposta para a vida, o universo e tudo mais?";
+        String pergunta = "";
         String resposta = inteligenciaArtificial.responderPergunta(pergunta);
         System.out.println("Resposta da IA: " + resposta);
     }
