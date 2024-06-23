@@ -1,20 +1,26 @@
+
+
 public class Main {
 
     public static void main(String[] args) {
-        SimpleAI ai = new SimpleAI();
+        System.out.println("Bem-vindo ao projeto Voidnoia - Inteligência Artificial em Java!");
 
-        // Carregar  texto
-        DataSetIterator textData = DataLoader.loadTextData("path/to/text/data");
-        DataLoader.normalizeData(textData);
-        ai.train(textData);
+       
 
-        // Carregar  imagem
-        DataSetIterator imageData = DataLoader.loadImageData("path/to/image/data");
-        DataLoader.normalizeData(imageData);
-        ai.train(imageData);
+       
+        IA inteligenciaArtificial = new IA();
 
         
-        int[] predictions = ai.predict(imageData.next());
-        System.out.println("Predictions: " + Arrays.toString(predictions));
+        String textoParaEnsinar = "Exemplo de texto para ensinar a IA.";
+        inteligenciaArtificial.aprenderTexto(textoParaEnsinar);
+
+        
+        String caminhoDaFoto = "/caminho/para/sua/foto.jpg";
+        inteligenciaArtificial.aprenderFoto(caminhoDaFoto);
+
+        
+        String pergunta = "Qual é a resposta para a vida, o universo e tudo mais?";
+        String resposta = inteligenciaArtificial.responderPergunta(pergunta);
+        System.out.println("Resposta da IA: " + resposta);
     }
 }
