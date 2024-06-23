@@ -15,8 +15,8 @@ public class SimpleAI {
     private MultiLayerNetwork model;
 
     public SimpleAI() {
-        int inputSize = 784;  // Exemplo: 28x28 pixels para uma imagem
-        int outputSize = 10;  // Exemplo: 10 classes
+        int inputSize = 784;  //pixels  imagem
+        int outputSize = 10;  
 
         MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
                 .updater(new Sgd(0.1))
@@ -43,7 +43,7 @@ public class SimpleAI {
 
     public static void main(String[] args) {
         SimpleAI ai = new SimpleAI();
-        // Aqui você pode carregar seus dados e treinar sua IA
-        // Exemplo: ai.train(trainingData);
+        //  dados e treinar sua IA
+        
     }
 }
