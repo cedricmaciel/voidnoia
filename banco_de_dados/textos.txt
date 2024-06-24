@@ -13,3 +13,6 @@ Vermelhor é uma cor
 2024-06-24 14:47:14 - Sim
 2024-06-24 14:47:19 - Não
 2024-06-24 14:47:37 - Ich bin hier
+2024-06-24 14:49:44 - Quem te criou?
+2024-06-24 14:51:11 - Qual é o seu nome?
+2024-06-24 14:51:37 - Vermelho é uma cor?
