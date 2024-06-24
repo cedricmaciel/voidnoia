@@ -16,3 +16,6 @@ Vermelhor é uma cor
 2024-06-24 14:49:44 - Quem te criou?
 2024-06-24 14:51:11 - Qual é o seu nome?
 2024-06-24 14:51:37 - Vermelho é uma cor?
+2024-06-24 14:54:17 - qual a cor do céu?
+2024-06-24 14:54:24 - Qual a cor do céu?
+2024-06-24 14:55:28 - Qual é a cor do céu?

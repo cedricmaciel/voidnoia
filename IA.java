@@ -100,6 +100,8 @@ public class IA {
         if (textoLower.contains("como você funciona")) {
             knowledgeBase.put("como você funciona", "Eu uso algoritmos de inteligência artificial para aprender e responder perguntas.");
         }
-        // Adicione mais regras de correspondência conforme necessário
+        if (textoLower.contains("qual é a cor do céu")) {
+            knowledgeBase.put("qual é a cor do céu", "O céu é azul");
+        }
     }
 }
