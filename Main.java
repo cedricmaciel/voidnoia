@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 public class Main {
 
     public static void main(String[] args) {
-        // Criar a janela principal
+        //  a janela principal
         JFrame frame = new JFrame("Voidnoia - Inteligência Artificial");
         frame.setSize(400, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -21,12 +21,12 @@ public class Main {
         textField.setBounds(20, 50, 360, 25);
         frame.add(textField);
 
-        // Botão para confirmar a inserção do texto
+        // Botão para confirmar a inserção 
         JButton button = new JButton("Ensinar Texto");
         button.setBounds(20, 90, 150, 25);
         frame.add(button);
 
-        // Adicionar ActionListener ao botão
+      
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -41,13 +41,13 @@ public class Main {
             }
         });
 
-        // Tornar a janela visível
+        //  janela visível
         frame.setVisible(true);
 
-        // Criar instância da classe IA para outras operações
+        
         IA inteligenciaArtificial = new IA();
 
-        // Código para aprender uma foto (se necessário)
+        // Código para aprender uma foto (tem que colocar ainda)
         String caminhoDaFoto = ""; // Substitua pelo caminho real da foto
         inteligenciaArtificial.aprenderFoto(caminhoDaFoto);
 
