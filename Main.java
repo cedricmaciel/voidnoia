@@ -5,28 +5,28 @@ import java.awt.event.ActionListener;
 public class Main {
 
     public static void main(String[] args) {
-        
+        // Criar a janela principal
         JFrame frame = new JFrame("Voidnoia - Inteligência Artificial");
         frame.setSize(400, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
 
-        
+        // Label para instruções
         JLabel label = new JLabel("Digite o texto para ensinar a IA:");
         label.setBounds(20, 20, 360, 25);
         frame.add(label);
 
-        // Caixa de texto para escrever 
+        // Caixa de texto para entrada de dados
         JTextField textField = new JTextField();
         textField.setBounds(20, 50, 360, 25);
         frame.add(textField);
 
-        // Botão  inserção do texto estilo
+        // Botão para confirmar a inserção do texto
         JButton button = new JButton("Ensinar Texto");
         button.setBounds(20, 90, 150, 25);
         frame.add(button);
 
-       
+        // Adicionar ActionListener ao botão
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -38,27 +38,21 @@ public class Main {
 
                 // Mostrar mensagem de confirmação
                 JOptionPane.showMessageDialog(frame, "Texto ensinado com sucesso!");
-
-                
             }
         });
 
-
-
-        
-
-        // janela visível
+        // Tornar a janela visível
         frame.setVisible(true);
 
         // Criar instância da classe IA para outras operações
         IA inteligenciaArtificial = new IA();
 
-        // parte para foto -- futura
-        String caminhoDaFoto = ""; 
+        // Código para aprender uma foto (se necessário)
+        String caminhoDaFoto = ""; // Substitua pelo caminho real da foto
         inteligenciaArtificial.aprenderFoto(caminhoDaFoto);
 
         // Código para responder a uma pergunta
-        String pergunta = "";
+        String pergunta = "Quem te criou?";
         String resposta = inteligenciaArtificial.responderPergunta(pergunta);
         System.out.println("Resposta da IA: " + resposta);
     }
