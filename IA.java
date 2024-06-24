@@ -57,8 +57,9 @@ public class IA {
 
     public String responderPergunta(String pergunta) {
         // Implementa lógica de correspondência de palavras-chave
+        String perguntaLower = pergunta.toLowerCase();
         for (Map.Entry<String, String> entry : knowledgeBase.entrySet()) {
-            if (pergunta.toLowerCase().contains(entry.getKey())) {
+            if (perguntaLower.contains(entry.getKey())) {
                 return entry.getValue();
             }
         }
@@ -88,8 +89,16 @@ public class IA {
 
     private void atualizarBaseDeConhecimento(String texto) {
         // Logica simples para extrair informações-chave
-        if (texto.toLowerCase().contains("quem te criou")) {
+        // Aqui, você pode adicionar regras mais sofisticadas para analisar e extrair informações dos textos
+        String textoLower = texto.toLowerCase();
+        if (textoLower.contains("quem te criou")) {
             knowledgeBase.put("quem te criou", "Fui criado por um desenvolvedor habilidoso.");
+        }
+        if (textoLower.contains("qual é o seu nome")) {
+            knowledgeBase.put("qual é o seu nome", "Meu nome é Voidnoia.");
+        }
+        if (textoLower.contains("como você funciona")) {
+            knowledgeBase.put("como você funciona", "Eu uso algoritmos de inteligência artificial para aprender e responder perguntas.");
         }
         // Adicione mais regras de correspondência conforme necessário
     }

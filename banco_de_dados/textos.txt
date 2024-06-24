@@ -10,3 +10,6 @@ Vermelhor é uma cor
 2024-06-24 14:27:00 - Guitarra é um instrumento
 2024-06-24 14:34:47 - arroz é comida
 2024-06-24 14:35:27 - Azul é uma cor 
+2024-06-24 14:47:14 - Sim
+2024-06-24 14:47:19 - Não
+2024-06-24 14:47:37 - Ich bin hier
