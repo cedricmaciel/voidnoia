@@ -15,7 +15,11 @@ public class IA {
 
     
     public String responderPergunta(String pergunta) {
-        
-        return "";
+          
+        return "Não vou falar";
     }
+
+    
 }
+
+
