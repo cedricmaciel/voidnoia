@@ -21,7 +21,7 @@ public class Main {
         textField.setBounds(20, 50, 360, 25);
         frame.add(textField);
 
-        // Botão  inserção do texto
+        // Botão  inserção do texto estilo
         JButton button = new JButton("Ensinar Texto");
         button.setBounds(20, 90, 150, 25);
         frame.add(button);
