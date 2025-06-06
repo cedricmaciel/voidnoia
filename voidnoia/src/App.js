@@ -1,12 +1,14 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ChatPage from './pages/ChatPage';
+import TrainPage from './pages/TrainPage';
 
-import './App.css';
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<ChatPage />} />
+        <Route path="/train" element={<TrainPage />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
