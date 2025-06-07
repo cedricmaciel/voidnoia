@@ -1,0 +1,111 @@
+/* Container principal */
+.train-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Título da página */
+  .train-title {
+    color: #2E3B55;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  /* Área do formulário */
+  .train-paper {
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Texto descritivo */
+  .train-description {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  
+  /* Formulário */
+  .train-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  /* Grupo de input */
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Labels */
+  .input-group label {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Campos de texto */
+  .train-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 60px;
+  }
+  
+  .train-input:focus {
+    outline: none;
+    border-color: #2196F3;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+  }
+  
+  /* Botão */
+  .train-button {
+    align-self: flex-end;
+    padding: 12px 24px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .train-button:hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .train-button:disabled {
+    background-color: #e0e0e0;
+    color: #9e9e9e;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 600px) {
+    .train-container {
+      padding: 16px;
+    }
+    
+    .train-paper {
+      padding: 16px;
+    }
+    
+    .train-title {
+      font-size: 1.5rem;
+    }
+  }

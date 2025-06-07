@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { Box, TextField, Button, Paper, Avatar } from '@mui/material';
-import SendIcon from '@mui/icons-material/Send';
 import Layout from '../components/Layout';
+import './ChatPage.css';
 
 export default function ChatPage() {
   const [messages, setMessages] = useState([
@@ -27,83 +26,44 @@ export default function ChatPage() {
 
   return (
     <Layout>
-      <Paper 
-        elevation={3} 
-        sx={{ 
-          height: '70vh', 
-          padding: 2, 
-          display: 'flex', 
-          flexDirection: 'column',
-          backgroundColor: '#f5f5f5'
-        }}
-      >
-        <Box sx={{ flex: 1, overflow: 'auto', mb: 2 }}>
+      <div className="chat-container">
+        <div className="messages-container">
           {messages.map((msg, i) => (
-            <Box 
+            <div 
               key={i} 
-              sx={{ 
-                display: 'flex', 
-                justifyContent: msg.isUser ? 'flex-end' : 'flex-start',
-                mb: 2
-              }}
+              className={`message-wrapper ${msg.isUser ? 'user' : ''}`}
             >
-              <Box
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  flexDirection: msg.isUser ? 'row-reverse' : 'row',
-                  gap: 1
-                }}
-              >
-                <Avatar sx={{ 
-                  bgcolor: msg.isBot ? '#4CAF50' : '#2196F3',
-                  width: 32, 
-                  height: 32 
-                }}>
+              <div className={`message-content ${msg.isUser ? 'user' : ''}`}>
+                <div className={`message-avatar ${msg.isBot ? 'bot' : ''}`}>
                   {msg.isBot ? 'V' : 'U'}
-                </Avatar>
-                <Paper
-                  sx={{
-                    padding: 1.5,
-                    maxWidth: '70%',
-                    backgroundColor: msg.isBot ? '#E8F5E9' : '#E3F2FD',
-                    borderRadius: msg.isUser ? 
-                      '18px 18px 0 18px' : '18px 18px 18px 0'
-                  }}
-                >
+                </div>
+                <div className={`message-bubble ${msg.isUser ? 'user' : ''}`}>
                   {msg.text}
-                </Paper>
-              </Box>
-            </Box>
+                </div>
+              </div>
+            </div>
           ))}
-        </Box>
+        </div>
         
-        <Box sx={{ display: 'flex', gap: 1 }}>
-          <TextField
-            fullWidth
-            variant="outlined"
+        <div className="input-area">
+          <input
+            type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleSend()}
             placeholder="Digite sua mensagem..."
-            sx={{ 
-              backgroundColor: 'white',
-              borderRadius: '4px'
-            }}
+            className="chat-input"
           />
-          <Button
-            variant="contained"
-            color="primary"
+          <button
             onClick={handleSend}
-            sx={{ 
-              minWidth: '56px',
-              height: '56px'
-            }}
+            className="send-button"
           >
-            <SendIcon />
-          </Button>
-        </Box>
-      </Paper>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
     </Layout>
   );
 }
