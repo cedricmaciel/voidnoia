@@ -1,11 +1,11 @@
-package main.java.com.voidnoia.storage;
+package com.voidnoia.storage;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.nio.file.*;
 import java.time.LocalDateTime;
 import java.util.*;
-import java.util.stream.Collectors;
+
 
 public class JsonDatabase {
     private final String DB_PATH = Paths.get("..", "data", "knowledge.json").toString();
@@ -101,7 +101,7 @@ public class JsonDatabase {
 
     private void logTraining(String question, String answer) {
         try {
-            String logFile = Path.of(LOGS_DIR, "training_" + LocalDate.now() + ".log").toString();
+            String logFile = Path.of(LOGS_DIR, "training_" + LocalDateTime.now() + ".log").toString();
             String logEntry = String.format("[%s] Novo conhecimento:\nP: %s\nR: %s\n\n", 
                 LocalDateTime.now(), question, answer);
             

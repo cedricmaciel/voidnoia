@@ -6,12 +6,31 @@ export default function TrainPage() {
   const [question, setQuestion] = useState('');
   const [answer, setAnswer] = useState('');
 
-  const handleSubmit = () => {
-    alert(`Você me ensinou:\nPergunta: ${question}\nResposta: ${answer}`);
-    setQuestion('');
-    setAnswer('');
+  
+  const handleSubmit = async () => {
+    try {
+      const response = await fetch('http://localhost:8080/api/train', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          question: question,
+          answer: answer
+        })
+      });
+  
+      if (response.ok) {
+        alert('Conhecimento adicionado com sucesso!');
+        setQuestion('');
+        setAnswer('');
+      } else {
+        throw new Error('Falha ao treinar a IA');
+      }
+    } catch (error) {
+      alert(`Erro: ${error.message}`);
+    }
   };
-
   return (
     <Layout>
       <div className="train-container">

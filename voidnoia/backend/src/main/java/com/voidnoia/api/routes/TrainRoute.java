@@ -1,8 +1,8 @@
-package main.java.com.voidnoia.api.routes;
+package com.voidnoia.api.routes;
 
 import com.sun.net.httpserver.*;
-import main.java.com.voidnoia.core.Chatbot;
-import  org.json.JSONObject;
+import com.voidnoia.core.Chatbot;
+import org.json.JSONObject;
 import java.io.*;
 import java.util.stream.Collectors;
 

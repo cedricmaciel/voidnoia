@@ -1,4 +1,4 @@
-package main.java.com.voidnoia.storage;
+package com.voidnoia.storage;
 
 public class KnowledgeRecord {
     

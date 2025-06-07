@@ -8,22 +8,41 @@ export default function ChatPage() {
   ]);
   const [input, setInput] = useState('');
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (input.trim() === '') return;
     
     // Adiciona mensagem do usuário
-    setMessages([...messages, { text: input, isUser: true }]);
+    const userMessage = { text: input, isUser: true };
+    setMessages(prev => [...prev, userMessage]);
     setInput('');
     
-    // Resposta simulada
-    setTimeout(() => {
+    try {
+      // Envia para o backend
+      const response = await fetch('http://localhost:8080/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          question: input
+        })
+      });
+  
+      const data = await response.json();
+      
+      // Adiciona resposta do bot
       setMessages(prev => [...prev, { 
-        text: "Estou aprendendo ainda! Quando integrarmos o backend, poderei responder melhor.", 
+        text: data.answer || "Não entendi a pergunta", 
         isBot: true 
       }]);
-    }, 1000);
+      
+    } catch (error) {
+      setMessages(prev => [...prev, { 
+        text: "Erro ao conectar com o servidor", 
+        isBot: true 
+      }]);
+    }
   };
-
   return (
     <Layout>
       <div className="chat-container">

@@ -1,8 +1,8 @@
-package main.java.com.voidnoia;
+package com.voidnoia;
 
-import main.java.com.voidnoia.api.ApiServer;
-import main.java.com.voidnoia.core.Chatbot;
-import main.java.com.voidnoia.storage.JsonDatabase;
+import com.voidnoia.api.ApiServer;
+import com.voidnoia.core.Chatbot;
+import com.voidnoia.storage.JsonDatabase;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class Main {
             Chatbot chatbot = new Chatbot(database);
             ApiServer server = new ApiServer(chatbot);
             
-            int port = 8080;
+            int port = 0;
             server.start(port);
             
             System.out.println("Chatbot Voidnoia está rodando na porta " + port);

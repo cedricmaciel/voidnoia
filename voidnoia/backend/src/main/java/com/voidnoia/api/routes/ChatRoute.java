@@ -4,6 +4,7 @@ import com.sun.net.httpserver.*;
 import com.voidnoia.core.Chatbot;
 import org.json.JSONObject;
 import java.io.*;
+import java.util.stream.Collectors;
 
 public class ChatRoute implements HttpHandler {
     private final Chatbot chatbot;
@@ -21,8 +22,7 @@ public class ChatRoute implements HttpHandler {
         
         try {
             // Ler o corpo da requisição
-            String requestBody = new BufferedReader(new InputStreamReader(exchange.getRequestBody()))
-                .lines().collect(Collectors.joining("\n"));
+            String requestBody = new BufferedReader(new InputStreamReader(exchange.getRequestBody())).lines().collect(Collectors.joining("\n"));
             
             JSONObject requestJson = new JSONObject(requestBody);
             String question = requestJson.getString("question");
