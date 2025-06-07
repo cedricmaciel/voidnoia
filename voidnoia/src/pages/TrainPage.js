@@ -15,8 +15,9 @@ export default function TrainPage() {
   return (
     <Layout>
       <div className="train-container">
+        <div className="div-title">
         <h1 className="train-title">Treinar a IA</h1>
-        
+       </div>
         <div className="train-paper">
           <p className="train-description">
             Aqui você pode ensinar novas respostas para a IA. Digite uma pergunta e a resposta correta.
