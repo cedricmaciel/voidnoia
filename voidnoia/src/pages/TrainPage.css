@@ -17,25 +17,24 @@ body{
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 20px;
-    display: flex;
     
-    align-items: center;
   }
   
   /* Área do formulário */
   .train-paper {
     padding: 24px;
-    background-color: #2c2c2c5e;
+    background-color: #0000005e;
     border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(236, 235, 235, 0.1);
   }
   
   /* Texto descritivo */
   .train-description {
-    color: #555;
+    color: #fdf8f8;
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 24px;
+    
   }
   
   /* Formulário */
@@ -55,7 +54,7 @@ body{
   /* Labels */
   .input-group label {
     font-weight: 500;
-    color: #333;
+    color: #fdf8f8;
   }
   
   /* Campos de texto */
