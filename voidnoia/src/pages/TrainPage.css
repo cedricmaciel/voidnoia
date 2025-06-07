@@ -1,16 +1,25 @@
 /* Container principal */
+body{
+    background-color: #333;
+}
+
 .train-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+
+    
   }
   
   /* Título da página */
   .train-title {
-    color: #2E3B55;
+    color: #ffffff;
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 20px;
+    display: flex;
+    
+    align-items: center;
   }
   
   /* Área do formulário */
