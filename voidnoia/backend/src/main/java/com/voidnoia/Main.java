@@ -1,8 +1,8 @@
-package com.voidnoia;
+package main.java.com.voidnoia;
 
-import com.voidnoia.api.ApiServer;
-import com.voidnoia.core.Chatbot;
-import com.voidnoia.storage.JsonDatabase;
+import main.java.com.voidnoia.api.ApiServer;
+import main.java.com.voidnoia.core.Chatbot;
+import main.java.com.voidnoia.storage.JsonDatabase;
 
 public class Main {
     public static void main(String[] args) {

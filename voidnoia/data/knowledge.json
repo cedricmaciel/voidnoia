@@ -1,0 +1,16 @@
+[
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440000",
+      "question": "como criar um componente react",
+      "answer": "Para criar um componente React, você pode usar a sintaxe: 'function MeuComponente() { return <div>Conteúdo</div>; }'",
+      "createdAt": "2023-11-15T10:30:00",
+      "lastUsed": "2023-11-15T10:30:00"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440001",
+      "question": "o que é um rigidbody no unity",
+      "answer": "Rigidbody é um componente do Unity que permite que um GameObject seja afetado pela física, como gravidade e colisões.",
+      "createdAt": "2023-11-15T10:35:00",
+      "lastUsed": "2023-11-15T10:35:00"
+    }
+  ]

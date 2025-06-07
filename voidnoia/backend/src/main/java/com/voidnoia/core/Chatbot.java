@@ -1,6 +1,6 @@
-package com.voidnoia.core;
+package main.java.com.voidnoia.core;
 
-import com.voidnoia.storage.JsonDatabase;
+import main.java.com.voidnoia.storage.JsonDatabase;
 import java.util.Optional;
 
 public class Chatbot {

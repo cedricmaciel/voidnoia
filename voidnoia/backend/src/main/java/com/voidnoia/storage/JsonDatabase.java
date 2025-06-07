@@ -1,4 +1,4 @@
-package com.voidnoia.storage;
+package main.java.com.voidnoia.storage;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
